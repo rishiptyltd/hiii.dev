@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+$background: white;
+$foreground: black;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    color: $foreground;
+    background: $background;
+    font-family: 'Comic Neue', cursive;
+}
+
+body {
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 2.75rem;
+}
+
+img {
+    height: 100vh;
+    width: auto;
+    animation: 10s linear slideInFromLeft;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#trisha {
+    position: absolute;
+    bottom: 0;
+    right: -5rem;
+    border: 0.35rem;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-170%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+body {
+    animation: background-flash infinite linear 1s;
+    animation-delay: 15s;
+}
+
+@keyframes background-flash {
+
+    0%,
+    49% {
+        background-color: red;
+    }
+
+    50%,
+    100% {
+        background-color: white;
+    }
+}
